@@ -1070,21 +1070,14 @@ text-align: center;
     font-size: 12px;
 }
 
+.mobile-carousel{
+    display: none;
+}
+
 .mul-carousel{
     margin-top: 30px;
 }
 
-.mul-carousel .carousel-icon-left{
-    position: absolute;
-    margin: 200px -70px;
-
-} 
-
-.mul-carousel .carousel-icon-right{
-    position: absolute;
-    margin: -157px 0px 0px 945px;
-
-} 
 
 .mul-carousel .card-img-top {
     width: 200px;
@@ -1156,6 +1149,41 @@ font-size: 13px;
     font-weight: 600;
     font-size: 13px;
     cursor: pointer;
+}
+
+.carousel-control-next3, .carousel-control-prev3 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #000000;
+    text-align: center;
+}
+
+a.carousel-control-next3, a.carousel-control-prev3:hover {
+    color: #000000;
+    text-decoration: none;
+}
+
+.carousel-control-prev3{
+    left: -130px;
+}
+
+.carousel-control-next3{
+    right: -130px;
+}
+
+.carousel-control-next3, .carousel-control-prev3{
+    top: 60px;
 }
 
 @media screen and (max-width: 1024px)
@@ -1262,13 +1290,17 @@ font-size: 13px;
         width: 150px;
         height: 130px;
     }
-    
-    .mul-carousel .carousel-icon-left{
-        margin: 180px -30px;
-    } 
 
-    .mul-carousel .carousel-icon-right {
-        margin: -127px 0px 0px 650px;
+    .carousel-control-prev3{
+        left: -75px;
+    }
+    
+    .carousel-control-next3{
+        right: -75px;
+    }
+    
+    .carousel-control-next3, .carousel-control-prev3{
+        top: 60px;
     }
 
     .mul-carousel .view-more{
@@ -1282,6 +1314,14 @@ font-size: 13px;
 }
 @media screen and (max-width: 480px)
 {
+    .mobile-carousel{
+        display: block;
+    }
+
+    .mul-carousel{
+        display: none;
+    }
+
     .news-content{
         padding-top: 60px !important;
         padding-bottom: 70px !important;
@@ -1296,49 +1336,123 @@ font-size: 13px;
         font-size: 10px;
     }
 
-    .mul-carousel{
+    .mobile-carousel .card-img-top {
+        width: 200px;
+        height: 150px;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+    
+    .mobile-carousel .card{
+        width: 200px;
+        margin: 50px 20px 0px 0px;
+        transition: all 500ms ease-in-out;
+        border: none;
+        border-radius: 0px;
+    }
+    .mobile-carousel .card-text{
+        font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 12px;
+    }
+    .mobile-carousel .card-body{
+        padding: 20px;
+    }
+    
+    .mobile-carousel .card-title{
+        font-family: Montserrat;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 11px;
+    }
+    
+    .mobile-carousel .card-link a{
+        font-family: Poppins;
+    font-style: normal;
+    font-weight: 500;
+    color: black;
+    font-size: 13px;
+    }
+    
+    .mobile-carousel .card-link a:hover{
+        color: #FF4B4B;
+        text-decoration: none;
+    }
+    
+    .mobile-carousel .card:hover{
         margin-top: 0px;
-    }
-    .mul-carousel .card-text{
-    font-size: 9px;
-    }
-    .mul-carousel .card-body{
-        padding: 10px;
-    }
-    
-    .mul-carousel .card-title{
-    font-size: 10px;
-    }
-    
-    .mul-carousel .card-link a{
-    font-size: 10px;
+        cursor: pointer;
+        box-shadow: 0px 12px 30px 0px rgba(0, 0, 0, 0.2);
+        transition: all 800ms cubic-bezier(0.19, 1, 0.22, 1);
     }
 
-    .mul-carousel .card{
-        width: 150px;
-        margin: 50px 50px 30px 63px;
+    .mobile-carousel{
+        margin: 0px 37px;
     }
-
-    .mul-carousel .card-img-top {
-        width: 150px;
-        height: 130px;
-    }
-    
-    .mul-carousel .carousel-icon-left{
+    .mobile-carousel .carousel-icon-left{
         margin: 667px 7px;
     } 
 
-    .mul-carousel .carousel-icon-right {
+    .mobile-carousel .carousel-icon-right {
         margin: -670px 0px 0px 230px;
     }
 
-    .mul-carousel .view-more{
+    .carousel-control-next4, .carousel-control-prev4 {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 15%;
+        color: #000000;
+        text-align: center;
+    }
+    
+    a.carousel-control-next4, a.carousel-control-prev4:hover {
+        color: #000000;
+        text-decoration: none;
+    }
+    
+    .carousel-control-prev4{
+        left: -50px;
+    }
+    
+    .carousel-control-next4{
+        right: -50px;
+    }
+    
+    .carousel-control-next4, .carousel-control-prev4{
+        top: 60px;
+    }
+    
+
+    .mobile-carousel .view-more{
+        position: relative;
+        margin: 30px auto 0px auto;
+        background-color: #FF4B4B;
         padding: 6px;
+        text-align: center;
         width: 100px;
     }
     
-    .mul-carousel .view-more p{
+    .mobile-carousel .view-more p{
+        margin: 0px;
+        color: #ffffff;
+        text-transform: uppercase;
+        font-family: Montserrat;
+        letter-spacing: 2px;
+        font-style: normal;
+        font-weight: 600;
         font-size: 9px;
+        cursor: pointer;
     }
 }
 
@@ -1906,6 +2020,10 @@ font-size: 10px;
     top: -146px;
 }
 
+.mob-awards-lists{
+    display: none;
+}
+
 @media screen and (max-width: 1024px)
 {
     .aww-image img{
@@ -1940,7 +2058,7 @@ font-size: 9px;
     }
 
     .award-head p{
-        padding: 125px 0px 0px 140px;
+        padding: 125px 0px 0px 80px;
         font-size: 30px;
     }
 
@@ -1969,6 +2087,16 @@ font-size: 6px;
 }
 @media screen and (max-width: 480px)
 {
+    .mob-awards-lists{
+        display: block;
+        margin-top: 30px;
+        margin-bottom: 50px;
+    }
+
+    .awards-lists{
+        display: none;
+    }
+
     .aww-image img{
         margin: 170px 0px 0px 0px;
         width: 395px;
@@ -1998,16 +2126,35 @@ margin-bottom: 0px;
 .award-text p{
 font-size: 10px;
 }
-.carousel-control-prev2{
+
+.carousel-control-next5, .carousel-control-prev5 {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    width: 15%;
+    color: #fff;
+    text-align: center;
+    opacity: .5;
+}
+.carousel-control-prev5{
     left: 25px;
 }
 
-.carousel-control-next2{
+.carousel-control-next5{
     right: 25px;
 }
 
-.carousel-control-next2, .carousel-control-prev2{
-    top: -90px;
+.carousel-control-next5, .carousel-control-prev5{
+    top: -60px;
 }
 }
 
